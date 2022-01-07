@@ -1,6 +1,6 @@
 :root {
     --white: #FFF;
-    --sr: hsl(14, 88%, 65%);
+    --gray: #595959;
     --sv: hsl(273, 75%, 66%);
     --sb:hsl(240, 73%, 65%);
     --vdgb: hsl(237, 12%, 33%);
@@ -37,16 +37,25 @@ header {
     height: auto;
 }
 nav {
-    
+   display: flex;
+    align-items: center;
 }
 #nav-list {
     list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 .nav-list-item {
     display: inline-block;
+    padding-left: 1rem; 
 }
 .nav-link {
     text-decoration: none;
+    color: var(--gray);
+}
+#hamburger {
+    display: inline-block;
+    
 }
 
 main {
