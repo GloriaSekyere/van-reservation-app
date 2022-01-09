@@ -14,7 +14,7 @@
 <body>
     
   <header>
-      <div id="header-container">
+    <div id="header-container">
       <div id="logo-div">
         <a href="#"><img id="logo" src="images/logo.png" alt="logo"></a>
       </div>
@@ -27,15 +27,31 @@
             <a class="nav-link" href="#">Sign in</a>
         </li>
         <li class="nav-list-item">
-            <img id="hamburger" src="images/hamburger.png">
+            <div id="hamburger-div"><img id="hamburger" src="images/hamburger.png" onclick="openMenu()"></div>
         </li>
         </ul>
+        <div id="menu">
+        <div id="menu-container">
+            
+         <div id="menu-header">
+             <p id="menu-title">Menu</p>
+             <div id="close-icon-div">
+                <img id="close-icon" src="images/close.png" alt="" aria-hidden="true" onclick="closeMenu()">
+             </div>
+         </div>
+            
+         <div id="settings-area">
+         </div>
+            
+            
+            
+            
+        </div>
+        </div>
       </nav>
-      </div>
-      
-      
-      
+    </div>
   </header>
+  
   <main>
       
     
@@ -43,29 +59,20 @@
       
       
   </main>
-  <footer></footer>
+  
+  <footer>
+      
+  </footer>
 
   <script>
-     
-          function arrow1() {
-          
-          let question = document.getElementById("q1").style;
-          
-          let answer = document.getElementById("a1").style;
-          
-          let arrow = document.getElementById('arrow-1').style;
-          
-          if (answer.display == 'block') {
-              question.fontWeight = 400;
-              answer.display = 'none';
-              arrow.transform  = 'rotate(0deg)';
-          }
-          else {
-              question.fontWeight = 700;
-              answer.display = 'block';
-              arrow.transform  = 'rotate(180deg)';
-          }   
-      }
+   function openMenu() {
+     menu = document.getElementById("menu");  
+       menu.style.width = "80%";
+   } 
+   function closeMenu() {
+     menu = document.getElementById("menu");
+       menu.style.width = "0%";
+   }
       
       
   </script>

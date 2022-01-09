@@ -1,11 +1,7 @@
 :root {
     --white: #FFF;
+    --light-gray: #D9D9D9;
     --gray: #595959;
-    --sv: hsl(273, 75%, 66%);
-    --sb:hsl(240, 73%, 65%);
-    --vdgb: hsl(237, 12%, 33%);
-    --dgb: hsl(240, 6%, 50%);
-    --lgb: hsl(240, 5%, 91%);
 }
 * {
     margin: 0;
@@ -14,6 +10,8 @@
 }
 body {
     background-color: antiquewhite;
+    position: relative;
+    overflow-x: hidden
 }
 header {
     width: 100%;
@@ -55,8 +53,58 @@ nav {
 }
 #hamburger {
     display: inline-block;
-    
+    max-width: 100%;
+    height: auto;
 }
+#hamburger-div{
+    display: flex;
+    align-items: center;
+}
+#menu {
+    width: 0%;
+    height: 100vh;
+    background-color: var(--white);
+    position: absolute;
+    top: 0;
+    right: 0; 
+    box-shadow: 0px 0px 10px var(--light-gray);
+    transition: all 0.5s;
+}
+#menu-container {
+    padding: 1.25rem 1rem 0;
+    position: relative;
+}
+#menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu-header::after {
+    content: "";
+    width: 100%;
+    height: 0.075rem;
+    background-color: var(--light-gray);
+    display: block;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+}
+#menu-title {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+#close-icon-div {
+    display: flex;
+    align-items: center;
+} 
+#close-icon {
+   max-width: 100%; 
+    height: auto;
+}
+    
+
+
+
 
 main {
     
